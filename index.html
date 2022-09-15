@@ -12,21 +12,24 @@
 
 <body>
 
-
+    <!-- HEADER ------------------------------------------------------------------------------------>
     <header>
+        <!-- NAVBAR -------------------------------------------------------------------------------->
         <nav id="menu">
+
             <div class="logo">
-                <a href="index.html">
+                <a href="#anchor_home">
                     <img src="assets/img/Epitech.gif" alt="Logo Epitech">
                 </a>
             </div>
+
             <div id="menu_expand_collapse">
                 <i class="fa fa-bars"></i>
             </div>
 
             <ul id="list">
                 <li class="menu_item">
-                    <a href="index.html">Home</a>
+                    <a href="#anchor_home">Home</a>
                 </li>
                 <li class="menu_item">
                     <a href="#">Test 2</a>
@@ -38,67 +41,112 @@
                     <a href="#contact">Contact</a>
                 </li>
             </ul>
+
         </nav>
-
+        <!-- END NAVBAR -------------------------------------------------------------------------->
     </header>
+    <!-- END HEADER ------------------------------------------------------------------------------>
 
-    <section class="img_header">
+    <!-- IMG HEAD -------------------------------------------------------------------------------->
+    <section id="anchor_home" class="img_header">
         <h1>Antoine Duquenne</h1>
     </section>
+    <!-- END IMG HEAD ---------------------------------------------------------------------------->
 
+    <!-- MAIN ------------------------------------------------------------------------------------>
     <main>
         <section class="container">
 
         </section>
     </main>
+    <!-- END MAIN -------------------------------------------------------------------------------->
 
 
+    <!-- FOOTER ---------------------------------------------------------------------------------->
     <footer id="contact">
+
         <h3>Contact</h3>
+
         <div class="contact_footer">
             <div class="ct_grid">
+
                 <div>
                     <a href="" id="email"></a>
                 </div>
+
                 <div>
                     <p class="tel">Tel : 07 61 91 34 81</p>
                 </div>
-                    <ul class="list2">
-                        <li>
-                            <a href="https://www.linkedin.com/in/antoine-duquenne-34b676162/" target="_blank">
-                                <i class="fa-brands fa-linkedin"></i>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/addevep" target="_blank">
-                                <i class="fa-brands fa-github"></i>
-                            </a>
-                        </li>
-                    </ul>
+
+                <ul class="list2">
+                    <li>
+                        <a href="https://www.linkedin.com/in/antoine-duquenne-34b676162/" target="_blank">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/addevep" target="_blank">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </li>
+                </ul>
+
             </div>
         </div>
+
+        <!-- COPYRIGHT --------------------------------------------------------------------------->
         <div class="cp_bt">
             <span id="cur_date"></span>
-            <a href="index.html">Digital Resume</a>
+            <a href="#anchor_home">Digital Resume</a>
         </div>
+        <!-- END COPYRIGHT ----------------------------------------------------------------------->
+
     </footer>
+    <!-- END FOOTER ------------------------------------------------------------------------------>
 
 
-    <div class="fixed_bl" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-        <div class="">
+    <!-- QSJ ------------------------------------------------------------------------------------->
+    <div class="fixed_bl">
+        <div class="qsj_modal_btn">
             <img class="img_qsj" src="assets/img/Qui_suis_je.svg" alt="">
         </div>
-        <button type="button" class="btn btn_tr rad50 btn_qsj">
-            Qui
-            <br>
-            suis-je
+        <button type="button" class="btn_qsj qsj_modal_btn">
+            Qui<br>suis-je
         </button>
     </div>
+    <!-- END QSJ --------------------------------------------------------------------------------->
 
+    <!-- QSJ MODAL ------------------------------------------------------------------------------->
+    <div id="qsj_modal" class="modal">
+
+        <div class="modal_content">
+            <i class="fa-sharp fa-solid fa-circle-xmark close"></i>
+            <div class="flex">
+                <div class="self_description">
+                    <h3>Who I am ?</h3>
+                </div>
+                <form action="submit" class="grid_form">
+                    <h3>Contact me !</h3>
+                    <div class="subgrid">
+                        <label for="firstname">Firstname</label>
+                        <input type="text">
+                        <label for="lastname">Lastname</label>
+                        <input type="text">
+                    </div>
+                    <div>
+                        <label for="mail">Email</label>
+                        <input type="mail" placeholder="jane.doe@epitech.eu">
+                    </div>
+                </form>
+            </div>
+
+        </div>
+      
+      </div>
+    <!-- END QSJ MODAL --------------------------------------------------------------------------->
 
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/script.js"></script>
-
 </body>
 
 </html>

@@ -1,7 +1,6 @@
 $(document).ready(function() {
     $(this).scrollTop(0);
 
-    
 /////////////////////////////////////////////////////////////////
 ////////////////////////NAVBAR SCROLL ///////////////////////////
 /////////////////////////////////////////////////////////////////    
@@ -11,7 +10,7 @@ $(window).scroll(function(){
     if (scroll > 100) {
         bgNavbar.addClass('bg_navbar');
 }
-else{
+    else{
     bgNavbar.removeClass('bg_navbar');
 }
 })
@@ -49,6 +48,18 @@ emailCrypt = ('antoine.duquenne@' + 'epitech.eu');
 email.setAttribute( 'href', `mailto:${emailCrypt}`);
 email.innerHTML ='Evoyer un mail';
 
+/////////////////////////////////////////////////////////////////
+////////////////////////////// MODAL ////////////////////////////
+/////////////////////////////////////////////////////////////////
+var modal = $('#qsj_modal');
+var btn = $('.qsj_modal_btn');
+var close = $('.close');
+btn.click(function() {
+    modal.css('display', 'block');
+})
+close.click(function() {
+    modal.css('display', 'none');
+})
 
 
 });
