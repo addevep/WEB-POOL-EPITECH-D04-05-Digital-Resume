@@ -32,10 +32,13 @@
                     <a href="#anchor_home">Home</a>
                 </li>
                 <li class="menu_item">
-                    <a href="#">Test 2</a>
+                    <a href="#anchor_sec_skills">Skills</a>
                 </li>
                 <li class="menu_item">
-                    <a href="#">Test 3</a>
+                    <a href="#anchor_sec_career">Career path</a>
+                </li>
+                <li class="menu_item">
+                    <a href="#anchor_sec_portfolio">Portfolio</a>
                 </li>
                 <li class="menu_item">
                     <a href="#contact">Contact</a>
@@ -53,13 +56,37 @@
     </section>
     <!-- END IMG HEAD ---------------------------------------------------------------------------->
 
+
+
+
+
+
+
     <!-- MAIN ------------------------------------------------------------------------------------>
     <main>
         <section class="container">
-
+            <div id="anchor_sec_skills"></div>
+            <div class="sep1"></div>
+            <h2 class="title1">Skills</h2>
+            
+            <div id="anchor_sec_career"></div>
+            <div class="sep2"></div>
+            <h2 class="title2">Career Path</h2>
+           
+            <div id="anchor_sec_portfolio"></div>
+            <div class="sep1"></div>
+            <h2 class="title1">Portfolio</h2>
         </section>
     </main>
     <!-- END MAIN -------------------------------------------------------------------------------->
+
+
+
+
+
+
+
+
 
 
     <!-- FOOTER ---------------------------------------------------------------------------------->
@@ -97,7 +124,7 @@
         <!-- COPYRIGHT --------------------------------------------------------------------------->
         <div class="cp_bt">
             <span id="cur_date"></span>
-            <a href="#anchor_home">Digital Resume</a>
+            <a href="#anchor_home">Antoine Duquenne</a>
         </div>
         <!-- END COPYRIGHT ----------------------------------------------------------------------->
 
@@ -111,7 +138,7 @@
             <img class="img_qsj" src="assets/img/Qui_suis_je.svg" alt="">
         </div>
         <button type="button" class="btn_qsj qsj_modal_btn">
-            Qui<br>suis-je
+            Who<br>I am
         </button>
     </div>
     <!-- END QSJ --------------------------------------------------------------------------------->
@@ -122,27 +149,48 @@
         <div class="modal_content">
             <i class="fa-sharp fa-solid fa-circle-xmark close"></i>
             <div class="flex">
+                
+                <!-- DESCRITPION ----------------------------------------------------------------->
                 <div class="self_description">
                     <h3>Who I am ?</h3>
+                    <div class="profil_img"><img src="assets/img/profil.png" alt="Image de profil">
+                    </div>
+                    <p>Évoluant depuis <strong>3 ans</strong> en tant que Développeur Web, j’intègre une Pré MSC en Septembre 2022 suivi d’une MSC Pro
+                        (M1 & M2) spé IA chez { Epitech Technology } à Bordeaux.<br><br>
+                        <strong>Je recherche donc activement une alterance de 32 mois dès Décembre 2022.</strong> 3 ans d’expériences cumulées en tant qu’Auto-entrepreneur dans les domaines du Développement Web et de la Formation Numérique.</p>
                 </div>
-                <form action="submit" class="grid_form">
+                <!-- END DESCRITPION ------------------------------------------------------------->
+
+                <!-- FORM ------------------------------------------------------------------------>
+                <form class="grid_form">
                     <h3>Contact me !</h3>
                     <div class="subgrid">
-                        <label for="firstname">Firstname</label>
-                        <input type="text">
-                        <label for="lastname">Lastname</label>
-                        <input type="text">
+                        <label for="firstname">Firstname
+                            <input type="text" name="firstname" id="firstname" placeholder="Jane" required>
+                        </label>
+                        <label for="lastname">Lastname
+                            <input type="text" name="lastname" id="lastname" placeholder="Doe" required>
+                        </label>
                     </div>
                     <div>
-                        <label for="mail">Email</label>
-                        <input type="mail" placeholder="jane.doe@epitech.eu">
+                        <label for="mail">Email
+                        <input type="mail" placeholder="jane.doe@epitech.eu" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+                    </label>
                     </div>
+                    <div>
+                        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Add your comment here..." required></textarea>
+                    </div>
+                    <button type="submit" id="btn_send" name="submit" value="Send">
+                        Send
+                    </button>
                 </form>
+                <!-- END FORM -------------------------------------------------------------------->
+
             </div>
 
         </div>
-      
-      </div>
+
+    </div>
     <!-- END QSJ MODAL --------------------------------------------------------------------------->
 
     <script src="assets/js/jquery.js"></script>
