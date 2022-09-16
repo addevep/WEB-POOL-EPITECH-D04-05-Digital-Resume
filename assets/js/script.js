@@ -33,6 +33,24 @@ $(window).on('resize', function() {
 });
 
 /////////////////////////////////////////////////////////////////
+//////////////////////FULLSCREEN IMG/////////////////////////////
+/////////////////////////////////////////////////////////////////
+$('img[data-fullscreen-img]').addClass('img-enlargable').click(function(){
+    var src = $(this).attr('src');
+    $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+});
+
+/////////////////////////////////////////////////////////////////
 //////////////////////////// COPYRIGHT //////////////////////////
 /////////////////////////////////////////////////////////////////
 let date =  new Date().getFullYear();
@@ -60,6 +78,4 @@ btn.click(function() {
 close.click(function() {
     modal.css('display', 'none');
 })
-
-
 });
